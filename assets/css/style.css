@@ -1,0 +1,457 @@
+/* General CSS */
+body{
+    font-size: 18px !important;
+    background-color: #F5F5F5 !important;
+}
+h6 {
+    margin-top: 16px !important;
+}
+
+
+.m-top{
+    margin-top: 10px;
+}
+/* General CSS End */
+/* ------------------------------------------------------------------------------------ */
+/* Form Start */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+form {
+    width: 75%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.carousel-control-prev-icon {
+    background-color: black;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-.25.25 2.5 2.5-2.5 2.5.25.25 2.75-2.75-.75-.75H0v-1h7.25l.75-.75-2.75-2.75z'/%3e%3c/svg%3e");
+}
+
+/* Form End */
+/* ------------------------------------------------------------------------------------ */
+/* Next and previous Buttons Start */
+.btn-nxt-prv{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.text-center a{
+    text-decoration: none;
+    -webkit-align-content: center;
+}
+.cssbuttons-io-button {
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+/*/* Next and previous Buttons Start*/
+/* ------------------------------------------------------------------------------------ */
+/* Progress Bar Start */
+.progress2 {
+    padding: 6px;
+    z-index: 20;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);
+    margin: 12px 12px 0px 12px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar2 {
+    height: 18px;
+    border-radius: 30px;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.05)
+    );
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+    width: 100%;
+    animation: progressAnimation 6s;
+}
+
+/* Progress Bar End */
+/* ------------------------------------------------------------------------------------ */
+/* Login Section Start */
+
+.login-section {
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.custom-card-body{
+    min-height: 200px;
+}
+
+
+.custom-card-about {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-card-about::before,
+.custom-card-about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background-color: #0a53be;
+    transition: height 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.custom-card-about::before {
+    left: 0;
+}
+
+.custom-card-about::after {
+    right: 0;
+}
+
+.custom-card-about:hover::before,
+.custom-card-about:hover::after {
+    height: 100%; /* Kartın yüksekliği */
+}
+
+.custom-card-about:hover::before {
+    top: 0; /* Kartın üst kenarına hizala */
+}
+
+.custom-card-about:hover::after {
+    top: 0; /* Kartın üst kenarına hizala */
+}
+
+/* Login Section End */
+/* ------------------------------------------------------------------------------------ */
+/* File Upload Start */
+
+.bin-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: 20%;
+    border-radius: 50%;
+    background-color: rgb(255, 95, 95);
+    cursor: pointer;
+    border: 2px solid rgb(255, 201, 201);
+    transition-duration: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.bin-bottom {
+    width: 15px;
+    z-index: 2;
+}
+.bin-top {
+    width: 17px;
+    transform-origin: right;
+    transition-duration: 0.3s;
+    z-index: 2;
+}
+.bin-button:hover .bin-top {
+    transform: rotate(45deg);
+}
+.bin-button:hover {
+    background-color: rgb(255, 0, 0);
+}
+.bin-button:active {
+    transform: scale(0.9);
+}
+.garbage {
+    position: absolute;
+    width: 14px;
+    height: auto;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.bin-button:hover .garbage {
+    animation: throw 0.4s linear;
+}
+@keyframes throw {
+    from {
+        transform: translate(-400%, -700%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+/* File Upload End */
+/* ------------------------------------------------------------------------------------ */
+/* Personel Data Start */
+.wave-group {
+    position: relative;
+}
+
+.wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+
+.wave-group .input:focus {
+    outline: none;
+}
+
+.wave-group .label {
+    color: #000000;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+}
+
+.wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #5264AE;
+}
+
+.wave-group .bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #1629b9;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+    left: 50%;
+}
+
+.wave-group .bar:after {
+    right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.personel-mail{
+    border-bottom: none;
+}
+.personel-data-form{
+    width: 75%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.custom-socials {
+    margin-top: 20px;
+}
+
+.custom-socials h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.custom-socials a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.custom-socials a i {
+    margin-right: 5px;
+    font-size: 24px;
+}
+
+.sociad-added {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.social-button-added {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+/* Personel Data End */
+/* ------------------------------------------------------------------------------------ */
+/* Selected Thema Start */
+.form-slider-container {
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+.custom-thema img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.custom-thema {
+    width: 300px;
+    height: auto;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+}
+
+.custom-thema i {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.swiper-slide {
+    max-width: 300px;
+    margin-right: 12px;
+    width: auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+/* Selected Thema End */
+/* ------------------------------------------------------------------------------------ */
+/* Payout Start */
+
+
+
