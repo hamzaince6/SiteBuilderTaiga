@@ -1,4 +1,3 @@
-/* General CSS */
 body{
     font-size: 18px !important;
     background-color: #F5F5F5 !important;
@@ -8,11 +7,14 @@ h6 {
 }
 
 
+
+
+
+/* General CSS */
 .m-top{
     margin-top: 10px;
 }
-/* General CSS End */
-/* ------------------------------------------------------------------------------------ */
+
 /* Form Start */
 .container {
     display: flex;
@@ -32,76 +34,8 @@ form {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-.25.25 2.5 2.5-2.5 2.5.25.25 2.75-2.75-.75-.75H0v-1h7.25l.75-.75-2.75-2.75z'/%3e%3c/svg%3e");
 }
 
+
 /* Form End */
-/* ------------------------------------------------------------------------------------ */
-/* Next and previous Buttons Start */
-.btn-nxt-prv{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-
-.text-center a{
-    text-decoration: none;
-    -webkit-align-content: center;
-}
-.cssbuttons-io-button {
-    background: #a370f0;
-    color: white;
-    font-family: inherit;
-    padding: 0.35em;
-    padding-left: 1.2em;
-    font-size: 17px;
-    font-weight: 500;
-    border-radius: 0.9em;
-    border: none;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    box-shadow: inset 0 0 1.6em -0.6em #714da6;
-    overflow: hidden;
-    position: relative;
-    height: 2.8em;
-    padding-right: 3.3em;
-    cursor: pointer;
-    margin-left: 6px;
-}
-
-.cssbuttons-io-button .icon {
-    background: white;
-    margin-left: 1em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.2em;
-    width: 2.2em;
-    border-radius: 0.7em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
-    right: 0.3em;
-    transition: all 0.3s;
-}
-
-.cssbuttons-io-button:hover .icon {
-    width: calc(100% - 0.6em);
-}
-
-.cssbuttons-io-button .icon svg {
-    width: 1.1em;
-    transition: transform 0.3s;
-    color: #7b52b9;
-}
-
-.cssbuttons-io-button:hover .icon svg {
-    transform: translateX(0.1em);
-}
-
-.cssbuttons-io-button:active .icon {
-    transform: scale(0.95);
-}
-
-/*/* Next and previous Buttons Start*/
 /* ------------------------------------------------------------------------------------ */
 /* Progress Bar Start */
 .progress2 {
@@ -131,10 +65,31 @@ form {
     animation: progressAnimation 6s;
 }
 
+@keyframes progressAnimation {
+    0% {
+        width: 0%;
+        background-color: #3498db;
+    }
+    25% {
+        width: 25%;
+        background-color: #3498db;
+    }
+    50% {
+        width: 50%;
+        background-color: #f1c40f;
+    }
+    75% {
+        width: 75%;
+        background-color: #2ecc71;
+    }
+    100% {
+        width: 100%;
+        background-color: #2ecc71;
+    }
+}
 /* Progress Bar End */
 /* ------------------------------------------------------------------------------------ */
 /* Login Section Start */
-
 .login-section {
     margin: 50px auto;
     padding: 20px;
@@ -144,44 +99,60 @@ form {
     min-height: 200px;
 }
 
+.cta {
+    border: none;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+}
 
-.custom-card-about {
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
     position: relative;
-    overflow: hidden;
+    color: black;
+    padding-bottom: 20px;
 }
 
-.custom-card-about::before,
-.custom-card-about::after {
-    content: '';
+.hover-underline-animation:after {
+    content: "";
     position: absolute;
-    top: 0;
-    width: 2px;
-    height: 0;
-    background-color: #0a53be;
-    transition: height 0.4s ease-in-out;
-    z-index: 1;
-}
-
-.custom-card-about::before {
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
     left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
-.custom-card-about::after {
-    right: 0;
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
-.custom-card-about:hover::before,
-.custom-card-about:hover::after {
-    height: 100%; /* Kartın yüksekliği */
-}
 
-.custom-card-about:hover::before {
-    top: 0; /* Kartın üst kenarına hizala */
-}
 
-.custom-card-about:hover::after {
-    top: 0; /* Kartın üst kenarına hizala */
-}
 
 /* Login Section End */
 /* ------------------------------------------------------------------------------------ */
@@ -409,23 +380,6 @@ form {
     width: 300px;
     height: auto;
     background-size: cover;
-    position: relative;
-    display: inline-block;
-}
-
-.custom-thema i {
-    position: absolute;
-    color: white;
-    bottom: 0;
-    left: 50%;
-    display: flex;
-    transform: translateX(-50%);
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: rgba(128, 128, 128, 0.3);
 }
 
 .swiper-slide {
@@ -452,6 +406,3 @@ form {
 /* Selected Thema End */
 /* ------------------------------------------------------------------------------------ */
 /* Payout Start */
-
-
-
