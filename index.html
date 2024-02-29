@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Example</title>
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Taiga Site Builder</title>
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 <header>
-        <div class="progress2 progress-moved">
-            <div class="progress-bar2"></div>
+    <div class="container-progress">
+        <div class="process-bar">
+            <div class="status-bar"></div>
+            <div class="step active"><i class="fas fa-shopping-cart"></i></div>
+            <div class="step"><i class="fas fa-address-book"></i></div>
+            <div class="step"><i class="fas fa-check-circle"></i></div>
+            <div class="step"><i class="fas fa-check-circle"></i></div>
+            <div class="step"><i class="fas fa-money-check-alt"></i></div>
         </div>
+    </div>
 </header>
-<section class="login-section">
+
+<section class="about-section section active" id="section1">
     <div class="container">
         <form>
             <div class="mb-3">
@@ -38,7 +46,6 @@
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card">
-<!--                        <img src="..." class="card-img-top" alt="...">-->
                         <div class="card-body custom-card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
@@ -47,7 +54,6 @@
                 </div>
                 <div class="col">
                     <div class="card">
-<!--                        <img src="..." class="card-img-top" alt="...">-->
                         <div class="card-body custom-card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
@@ -56,7 +62,6 @@
                 </div>
                 <div class="col">
                     <div class="card">
-<!--                        <img src="..." class="card-img-top" alt="...">-->
                         <div class="card-body custom-card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
@@ -65,35 +70,304 @@
                 </div>
             </div>
             <div class="m-top">
-                <label for="file" class="form-label">Fotoğraf Yükleme Alanı</label>
-                <input type="file" class="form-control" id="file">
+                <label for="file-image" class="form-label">Fotoğraf Yükleme Alanı</label>
+                <input type="file" class="form-control" id="file-image">
             </div>
-
-            <div class="text-center m-top">
-                <a class="cta" href="fileupload.html">
-                    <span class="hover-underline-animation">Next</span>
-                    <svg
-                            id="arrow-horizontal"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="30"
-                            height="10"
-                            viewBox="0 0 46 16"
-                    >
-                        <path
-                                id="Path_10"
-                                data-name="Path 10"
-                                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                                transform="translate(30)"
-                        ></path>
-                    </svg>
-                </a>
+            <div class="m-top">
+                <label for="file-image-slider" class="form-label">Slider Yükleme Alanı</label>
+                <input type="file" class="form-control" id="file-image-slider">
             </div>
         </form>
     </div>
 </section>
 
 
+
+
+
+<section class="fileupload-section section" id="section2">
+    <div class="container">
+        <form>
+            <div class="mb-3">
+                <label class="form-label"><h3>Akademisyen</h3></label>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p>Makeleleriniz</p>
+                    <div id="fileList"></div>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-end" id="deleteButton"></div>
+            </div>
+            <div class="m-top">
+                <label for="Article" class="form-label">Makale Ekle</label>
+                <input type="file" class="form-control" id="Article" onchange="showFileInfo()">
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section class="personel-data-section section" id="section3">
+    <div class="container">
+        <form class="personel-data-form">
+            <div class="mb-3">
+                <label class="form-label"><h3>Akademisyen</h3></label>
+            </div>
+            <div class="row">
+                <div class="col-12 wave-group">
+                    <h6>Tel</h6>
+                    <input  class="input" id="phoneNumber" maxlength="16" />
+                    <span class="bar"></span>
+                </div>
+                <div class="col-12 m-top personel-mail wave-group">
+                    <h6>E Posta</h6>
+                    <input  class="input" id="personelmail" />
+                    <span class="bar"></span>
+                </div>
+                <div class="col-12 custom-socials">
+                    <h6>Sosyal Medya</h6>
+                    <a href="https://mail.yandex.com.tr/?uid=1130000064076381#inbox"><i class="fa-brands fa-instagram"></i>İnstagram</a>
+                    <a href="https://mail.yandex.com.tr/?uid=1130000064076381#inbox"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                    <a href="https://mail.yandex.com.tr/?uid=1130000064076381#inbox"><i class="fa-brands fa-x"></i>X</a>
+                    <a href="https://mail.yandex.com.tr/?uid=1130000064076381#inbox"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+                    <div class="sociad-added">
+                        <button class="social-button-added" onclick="openPopup()">Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="selected-thema-section section" id="section4">
+    <div class="container">
+        <form class="form-slider-container">
+            <div class="mb-3">
+                <label class="form-label"><h3>Tema Seç</h3></label>
+            </div>
+            <div class="row">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/1.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/2.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/3.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/4.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/5.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/6.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/7.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/8.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/9.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/10.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="custom-thema">
+                                <img src="assets/img/11.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slayt kontrol düğmeleri -->
+                    <!--                    <div class="swiper-button-prev"></div>-->
+                    <!--                    <div class="swiper-button-next"></div>-->
+                </div>
+
+            </div>
+            <div class="col-12 m-top">
+                <label for="domainname" class="form-label">Alan Adı Seç</label>
+                <input type="text" class="form-control" id="domainname" placeholder="Alan Adı Seç">
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section class="payout-section section" id="section5">
+    <div class="container">
+        <form>
+            <div class="mb-3">
+                <label class="form-label"><h3>Ödeme</h3></label>
+            </div>
+            <!-- Paketler Slider -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="package">
+                            <div class="card" style="width: 18rem;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--                &lt;!&ndash; Slayt kontrol düğmeleri &ndash;&gt;-->
+                <!--                <div class="swiper-button-prev"></div>-->
+                <!--                <div class="swiper-button-next"></div>-->
+            </div>
+
+            <!-- Kredi Kartı Bilgileri -->
+            <div class="mt-4">
+                <label class="form-label">Kredi Kartı Bilgileri</label>
+                <div
+                        class="flex flex-col justify-around bg-gray-800 p-4 border border-white border-opacity-30 rounded-lg shadow-md max-w-xs mx-0">
+                    <div class="flex flex-row items-center justify-between mb-3">
+                        <input
+                                class="w-full h-10 border-none outline-none text-sm bg-gray-800 text-white font-semibold caret-orange-500 pl-2 mb-3 flex-grow"
+                                type="text"
+                                name="cardName"
+                                id="cardName"
+                                placeholder="Full Name"
+                        />
+                        <div
+                                class="flex items-center justify-center relative w-14 h-9 bg-gray-800 border border-white border-opacity-20 rounded-md"
+                        >
+                            <svg
+                                    class="text-white fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 48 48"
+                            >
+                                <path
+                                        fill="#ff9800"
+                                        d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"
+                                ></path>
+                                <path
+                                        fill="#d50000"
+                                        d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"
+                                ></path>
+                                <path
+                                        fill="#ff3d00"
+                                        d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <input
+                                class="w-full h-10 border-none outline-none text-sm bg-gray-800 text-white font-semibold caret-orange-500 pl-2"
+                                type="text"
+                                name="cardNumber"
+                                id="cardNumber"
+                                placeholder="0000 0000 0000 0000"
+                        />
+                        <div class="flex flex-row justify-between">
+                            <input
+                                    class="w-full h-10 border-none outline-none text-sm bg-gray-800 text-white font-semibold caret-orange-500 pl-2"
+                                    type="text"
+                                    name="expiryDate"
+                                    id="expiryDate"
+                                    placeholder="MM/AA"
+                            />
+                            <input
+                                    class="w-full h-10 border-none outline-none text-sm bg-gray-800 text-white font-semibold caret-orange-500 pl-2"
+                                    type="text"
+                                    name="cvv"
+                                    id="cvv"
+                                    placeholder="CVV"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fatura Bilgileri -->
+            <div class="mt-4">
+                <label class="form-label">Fatura Bilgileri</label>
+                <!-- Fatura bilgileri giriş alanları buraya gelecek -->
+            </div>
+        </form>
+    </div>
+</section>
+
+<div class="btns">
+    <button class="btn" disabled="disabled" id="prev">Prev</button>
+    <button class="btn" id="next">Next</button>
+</div>
+
+<script>
+    var currentSection = 1;
+    var totalSections = 5;
+
+    document.getElementById("next").addEventListener("click", function() {
+        if (currentSection < totalSections) {
+            document.getElementById("section" + currentSection).classList.remove("active");
+            currentSection++;
+            document.getElementById("section" + currentSection).classList.add("active");
+            document.getElementById("prev").disabled = false;
+
+            // Son bölüme ulaşıldığında, Next butonunu gizle
+            if (currentSection === totalSections) {
+                document.getElementById("next").style.display = "none";
+            }
+        }
+    });
+
+    document.getElementById("prev").addEventListener("click", function() {
+        if (currentSection > 1) {
+            document.getElementById("section" + currentSection).classList.remove("active");
+            currentSection--;
+            document.getElementById("section" + currentSection).classList.add("active");
+            document.getElementById("next").style.display = "block"; // Previous butona basıldığında next butonunu tekrar göster
+            if (currentSection === 1) {
+                document.getElementById("prev").disabled = true;
+            }
+        }
+    });
+
+
+
+</script>
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/fileupload.js"></script>
+<script src="assets/js/personeldata.js"></script>
+<script src="assets/js/progress.js"></script>
+<script src="assets/js/selectedthema.js"></script>
 </body>
 </html>
