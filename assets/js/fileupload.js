@@ -77,7 +77,7 @@ function showStoredFiles() {
     for (var i = 0; i < uploadedFiles.length; i++) {
         var fileInfo = document.createElement('div');
         var fileName = uploadedFiles[i].name;
-        fileInfo.innerHTML = '<div style="display: flex; justify-content: space-between; place-content: space-between;"><p style="margin-right: 10px;">Dosya Adı: ' + fileName + '</p>' +
+        fileInfo.innerHTML = '<div style="display: flex; justify-content: space-between; place-content: space-between; margin-top: 14px;"><p style="margin-right: 10px;">Dosya Adı: ' + fileName + '</p>' +
             '<button class="bin-button" onclick="removeFile(\'' + fileName + '\')">' +
             '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 39 7" class="bin-top">' +
             '<line stroke-width="4" stroke="white" y2="5" x2="39" y1="5"></line>' +
