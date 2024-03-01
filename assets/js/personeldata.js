@@ -42,26 +42,33 @@ inputElement.addEventListener('keydown',enforceFormat);
 inputElement.addEventListener('keyup',formatToPhone);
 
 
-function openPopup() {
-    document.getElementById('popup').style.display = 'block';
-}
 
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
+document.addEventListener("DOMContentLoaded", function() {
+    var addButton = document.querySelector(".social-button-added");
+    var popup = document.getElementById("popup");
+    var closeButton = document.querySelector(".close");
 
-function addSocialMedia() {
-    // Sosyal medya eklemek için gereken işlemleri burada gerçekleştirin
-    // Örneğin, inputlardan değerleri alıp bir listeye ekleyebilirsiniz
-    closePopup(); // Popup'ı kapatmak için
-}
+    addButton.addEventListener("click", function(event) {
+        // Butonun varsayılan davranışını engelle
+        event.preventDefault();
 
-// Popup dışında bir yere tıklandığında veya Escape tuşuna basıldığında popup'ın kapanmasını sağlayan olayları dinleyen fonksiyon
-window.onclick = function(event) {
-    var popup = document.getElementById('popup');
-    if (event.target == popup) {
+        // Popup'ı göster
+        popup.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", function() {
+        // Popup'ı gizle
         popup.style.display = "none";
-    }
-}
+    });
+
+    // Popup dışındaki bir yere tıklandığında popup'ı kapat
+    window.addEventListener("click", function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    });
+});
+
+
 
 

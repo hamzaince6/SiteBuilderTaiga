@@ -2,16 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
     var cardElements = document.querySelectorAll(".card-select");
 
     cardElements.forEach(function(card) {
-        card.addEventListener("click", function() {
-            // Tıklanan kartın tüm sınıflarını kontrol et ve "clicked" sınıfını ekleyin veya kaldırın
-            if (this.classList.contains("clicked")) {
-                this.classList.remove("clicked");
-            } else {
+        card.addEventListener("click", function(event) {
+            // Diğer kartlardan "clicked" sınıfını kaldır
+            cardElements.forEach(function(otherCard) {
+                if (otherCard !== card && otherCard.classList.contains("clicked")) {
+                    otherCard.classList.remove("clicked");
+                }
+            });
+
+            // Tıklanan kartın "clicked" sınıfını kontrol et ve ekleyin veya kaldırın
+            if (!this.classList.contains("clicked")) {
                 this.classList.add("clicked");
             }
         });
     });
 });
+
 
 function previewImage(event) {
     var input = event.target;
