@@ -513,6 +513,11 @@ button:focus {
     color: white;
     font-size: 24px;
 }
+
+#previewThema {
+    display: none;
+}
+
 /* Selected Thema End */
 /* ------------------------------------------------------------------------------------ */
 /* Payout Start */
