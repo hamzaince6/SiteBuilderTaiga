@@ -222,12 +222,12 @@ button:focus {
 .preview-image {
     width: 800px;
     height: 400px;
-    margin-top: 18px;
     -webkit-align-content: center;
     background-position: center;
     background-image: none;
     background-size: contain;
     background-repeat: no-repeat;
+    margin: 24px auto;
 }
 
 /* About Section End */
@@ -450,6 +450,7 @@ button:focus {
     height: auto;
     display: block;
     margin: auto;
+    border-radius: 4px;
 }
 
 .custom-thema {

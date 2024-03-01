@@ -1,8 +1,19 @@
 @media (max-width: 768px) {
-    .form {
+    form {
         width: 100% !important;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
+    }
+    .preview-image {
+        width: 80%;
+        height: 400px;
+        margin-top: 18px;
+        -webkit-align-content: center;
+        background-position: center;
+        background-image: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 2rem;
     }
 }

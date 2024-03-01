@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taiga Site Builder</title>
+    <!--CSS-->
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!--Swipper-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--Font Awsome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Tailwind Libary-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!--Bootstrap Libary-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
 <header>
     <div class="container-progress">
         <div class="process-bar">
@@ -87,7 +93,6 @@
                 <label for="file-image" class="form-label">Fotoğraf Yükleme Alanı</label>
                 <input type="file" class="form-control" id="file-image" onchange="previewImage(event)">
             </div>
-
             <div class="m-top">
                 <label for="file-image-slider" class="form-label">Slider Yükleme Alanı</label>
                 <input type="file" class="form-control" id="file-image-slider" multiple onchange="previewImageSlider(event)">
@@ -194,7 +199,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="custom-thema">
-                                <img src="assets/img/3.png">
+                                <img alt="taiga-site-builder-img-3" src="assets/img/3.png">
                                 <div class="selected">
                                     <i class="fa-solid fa-check"></i>
                                 </div>
@@ -202,7 +207,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="custom-thema">
-                                <img src="assets/img/4.png">
+                                <img alt="taiga-site-builder-img-4" src="assets/img/4.png">
                             </div>
                             <div class="selected">
                                 <i class="fa-solid fa-check"></i>
@@ -210,7 +215,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="custom-thema">
-                                <img src="assets/img/5.png">
+                                <img alt="taiga-site-builder-img-5" src="assets/img/5.png">
                                 <div class="selected">
                                     <i class="fa-solid fa-check"></i>
                                 </div>
@@ -218,7 +223,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="custom-thema">
-                                <img src="assets/img/6.png">
+                                <img alt="taiga-site-builder-img-6" src="assets/img/6.png">
                                 <div class="selected">
                                     <i class="fa-solid fa-check"></i>
                                 </div>
@@ -226,7 +231,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="custom-thema">
-                                <img src="assets/img/7.png">
+                                <img alt="taiga-site-builder-img-7" src="assets/img/7.png">
                                 <div class="selected">
                                     <i class="fa-solid fa-check"></i>
                                 </div>
@@ -234,7 +239,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="custom-thema">
-                                <img src="assets/img/8.png">
+                                <img alt="taiga-site-builder-img-8" src="assets/img/8.png">
                                 <div class="selected">
                                     <i class="fa-solid fa-check"></i>
                                 </div>
@@ -265,15 +270,15 @@
                 <label class="form-label"><h3>Ödeme</h3></label>
                 <div>
                     <div class="relative max-w-7xl mx-auto">
-                        <div class="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex bg-white"> <!-- Arka plan rengi beyaz yapıldı -->
-                            <div class="flex-1 px-6 py-8 lg:p-12 bg-white text-black"> <!-- Arka plan rengi ve yazı rengi siyah yapıldı -->
-                                <h3 class="text-2xl font-extrabold sm:text-3xl">Lifetime access</h3> <!-- Yazı rengi siyah yapıldı -->
-                                <p class="mt-6 text-base sm:text-lg">Take your Tailwind CSS development to the next level!</p> <!-- Yazı rengi siyah yapıldı -->
+                        <div class="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex bg-white">
+                            <div class="flex-1 px-6 py-8 lg:p-12 bg-white text-black">
+                                <h3 class="text-2xl font-extrabold sm:text-3xl">Lifetime access</h3>
+                                <p class="mt-6 text-base sm:text-lg">Take your Tailwind CSS development to the next level!</p>
                                 <div class="mt-8">
                                     <div class="flex items-center">
                                         <div class="flex-1 border-t-2 border-gray-200"></div>
                                     </div>
-                                    <ul role="list" class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:gap-x-8 lg:gap-y-5">
+                                    <ul role="list" class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:gap-x-8 lg:gap-y-5 ml-0 pl-0">
                                         <li class="flex items-start lg:col-span-1">
                                             <div class="flex-shrink-0"><svg class="h-5 w-5 text-green-400"
                                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -282,7 +287,7 @@
                                                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                       clip-rule="evenodd"></path>
                                             </svg></div>
-                                            <p class="ml-3">Inspect Tailwind CSS websites</p> <!-- Yazı rengi siyah yapıldı -->
+                                            <p class="ml-3">Inspect Tailwind CSS websites</p>
                                         </li>
                                         <li class="flex items-start lg:col-span-1">
                                             <div class="flex-shrink-0"><svg class="h-5 w-5 text-green-400"
@@ -292,7 +297,7 @@
                                                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                       clip-rule="evenodd"></path>
                                             </svg></div>
-                                            <p class="ml-3">Edit mode in real-time</p> <!-- Yazı rengi siyah yapıldı -->
+                                            <p class="ml-3">Edit mode in real-time</p>
                                         </li>
                                         <li class="flex items-start lg:col-span-1">
                                             <div class="flex-shrink-0"><svg class="h-5 w-5 text-green-400"
@@ -302,7 +307,7 @@
                                                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                       clip-rule="evenodd"></path>
                                             </svg></div>
-                                            <p class="ml-3">Copy utility classes right into your clipboard</p> <!-- Yazı rengi siyah yapıldı -->
+                                            <p class="ml-3">Copy utility classes right into your clipboard</p>
                                         </li>
                                         <li class="flex items-start lg:col-span-1">
                                             <div class="flex-shrink-0"><svg class="h-5 w-5 text-green-400"
@@ -312,23 +317,23 @@
                                                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                                       clip-rule="evenodd"></path>
                                             </svg></div>
-                                            <p class="ml-3">Free Chrome extension updates (Firefox coming soon)</p> <!-- Yazı rengi siyah yapıldı -->
+                                            <p class="ml-3">Free Chrome extension updates (Firefox coming soon)</p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="py-8 px-6 text-center lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12 bg-white text-black"> <!-- Arka plan rengi ve yazı rengi siyah yapıldı -->
+                            <div class="py-8 px-6 text-center lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12 bg-white text-black">
                                 <p class="text-lg leading-6 font-medium">Pay once, own it forever</p> <!-- Yazı rengi siyah yapıldı -->
                                 <div class="mt-4 flex items-center justify-center text-5xl font-extrabold">
-                                    <span>$19.99</span><span class="ml-3 text-xl font-medium">USD</span> <!-- Yazı rengi siyah yapıldı -->
+                                    <span>$19.99</span><span class="ml-3 text-xl font-medium">USD</span>
                                 </div>
                                 <div class="mt-6">
-                                    <div class="rounded-md shadow">
-                                        <a href="#"
-                                           class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-indigo-500 hover:bg-indigo-600 text-white">Buy
-                                            now</a> <!-- Yazı rengi beyaz yapıldı -->
-                                    </div>
-                                    <p class="text-sm mt-3">100% money back guarantee</p> <!-- Yazı rengi siyah yapıldı -->
+<!--                                    <div class="rounded-md shadow">-->
+<!--                                        <a href="#"-->
+<!--                                           class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-indigo-500 hover:bg-indigo-600 text-white">Buy-->
+<!--                                            now</a> &lt;!&ndash; Yazı rengi beyaz yapıldı &ndash;&gt;-->
+<!--                                    </div>-->
+                                    <p class="text-sm mt-3">100% money back guarantee</p>
                                 </div>
                             </div>
                         </div>
