@@ -62,5 +62,35 @@ function previewImageSlider(event) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    var cards = document.querySelectorAll(".card");
+
+    cards.forEach(function(card) {
+        card.addEventListener("click", function() {
+            var cardId = this.getAttribute("data-card-id");
+            var cardTitle = this.querySelector(".card-title").textContent;
+            var cardText = this.querySelector(".card-text").textContent;
+
+            var popup = document.getElementById("popup-" + cardId);
+            var popupTitle = popup.querySelector(".popup-title");
+            var popupText = popup.querySelector(".popup-text");
+
+            popupTitle.textContent = cardTitle;
+            popupText.textContent = cardText;
+
+            popup.style.display = "block";
+        });
+    });
+
+    // Popup kapatma işlevi
+    var closeButtons = document.querySelectorAll(".close");
+    closeButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            this.parentElement.parentElement.style.display = "none";
+        });
+    });
+});
+
+
 
 

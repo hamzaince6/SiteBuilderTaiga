@@ -434,6 +434,22 @@ button:focus {
     right: 10px;
     cursor: pointer;
 }
+
+.popup-about{
+    width: 30%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 9999;
+    overflow-y: scroll;
+    max-height: 500px;
+    background-color: darkgray;
+}
+
 /* Personel Data End */
 /* ------------------------------------------------------------------------------------ */
 /* Selected Thema Start */
